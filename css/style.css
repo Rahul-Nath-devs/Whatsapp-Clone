@@ -1,0 +1,889 @@
+/* common css starts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+
+    --firstcolor:#1c1e21;
+    --secondcolor:#ffffff;
+    --bgcolor:#fcf5eb;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bgcolor);
+}   
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.center{
+    align-items: center;
+}
+
+.space{
+    justify-content: space-between;
+}
+
+
+
+.container{
+    width: 1100px;
+    margin: auto;
+    height: 100%;
+}
+/* common css ends */
+
+/* Nav bar starts */
+nav .logo{
+    width: 25%;
+}
+
+nav .menu{
+    width: 42%;
+    text-align: center;
+    
+}
+
+nav .menu ul li{
+    display: inline-block;
+    position: relative;
+}
+
+nav .menu ul li a{
+    font-size: 16px;
+    color: var(--firstcolor);
+    margin: 0 15px;
+    position: relative;
+
+}
+
+
+nav .menu ul li a::after{
+    content: "";
+    width: 0%;
+    height: 10%;
+    position: absolute;
+    background-color: #25d366;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    
+}
+nav .menu ul li a:hover::after{
+    width: 100%;
+}
+nav .btn{
+    width: 33%;  
+    text-align: center;
+}
+
+nav .btn ul li{
+    display: inline-block;
+}
+
+nav .btn ul li .web_anc{
+    font-size: 16px;
+    color: var(--firstcolor);
+    position: relative;
+}
+
+
+
+
+nav .btn ul li .web_anc::after{
+    content: '';
+    width: 0%;
+    height: 10%;
+    position: absolute;
+    background-color: #25d366;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+
+}
+
+nav .btn ul li .web_anc:hover::after{
+    width: 100%;
+}
+
+nav .btn ul li .download_anc{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 40px;
+    background-color: #25d366;
+    margin-left: 20px;
+    font-size: 16px;  
+    position: relative;
+    z-index: 1 ;
+     transition: 0.5s;
+    color: var(--firstcolor);
+    border: 1px solid black;
+     
+}
+
+nav .btn ul li .download_anc::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--firstcolor);
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scaleX(0);
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+}
+nav .btn ul li .download_anc:hover:after{
+    height: 100%;
+    transform: scaleX(1);
+    border-radius: 40px;  
+    opacity: 1;
+    visibility: visible;  
+}
+
+nav .btn ul li .download_anc:hover{
+    color: var(--secondcolor);
+}
+/* Nav bar ends */
+
+/* Banner part starts */
+
+.justify_center{
+    align-items: center;
+}
+
+
+#banner .banner_det{
+   width: 30%;
+   margin-left: 10px;
+   
+}
+
+.banner_det h2{
+    font-size: 80px;
+    color: var(--secondcolor);
+    margin: 0 0 0 0;
+    line-height: 90px;
+   
+}
+
+.banner_det p{
+    font-size: 18px;
+    color: var(--secondcolor);
+}
+
+.banner_det a{
+    width: 140px;
+    height: 50px;
+    background-color: #25d366;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 40px;
+    color: var(--firstcolor);
+    position: relative;
+    z-index: 1 ;   
+}
+
+
+.banner_det a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--secondcolor);
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scaleX(0);
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+     
+
+}
+
+.banner_det a:hover::after{
+    height: 100%;
+    transform: scaleX(1);
+    border-radius: 40px;  
+    opacity: 1;
+    visibility: visible;
+ 
+}
+
+#banner .overlay_images{
+position: relative;
+
+}
+
+.overlay_images .gd_morning{
+  position: absolute;
+  left: 320px;
+   bottom: 260px;
+}
+
+.overlay_images .cup_love{
+    position: absolute;
+    left:645px;
+    bottom: 160px;
+}
+
+.overlay_images .voice_mail{
+    position: absolute;
+    left: 330px;
+    bottom: 75px;
+}
+
+.overlay_images .girls{
+    position: absolute;
+    left: 330px;
+   bottom:-195px ;
+}
+
+.overlay_images .message{
+    position: absolute;
+    top: 250px;
+    left: 450px;
+}
+/* Banner ends */
+
+/* Message section starts */
+#Message {
+    margin-top: 70px;
+}
+
+#Message .first_msg img{
+    width: 100%;
+}
+
+
+
+#Text .text_one{
+    width: 90%;
+    text-align: center;  
+}
+
+#Text .text_one h4{
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+#Message_two .second_msg img{
+    width: 100%;
+}
+/* Message section ends */
+
+/* Video call section starts */
+#video_calls .video_text{
+    width: 40%;
+    margin-top: 130px;
+}
+
+#video_calls .video_text h4{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -1.8px;
+    margin-bottom: 0;
+
+}
+
+#video_calls .video_text p{
+    font-size: 18px;
+    line-height: 25px;
+     
+}
+
+#video_calls .video_text a{
+color: var(--firstcolor);
+position: relative;
+transition: 0.4s;
+display: inline-block;
+margin: 10px 0;
+
+}
+
+#video_calls .video_text a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #25d366;
+    left: 0;
+    bottom: -4px;
+}
+
+#video_calls .video_text a:hover{
+    color: #25d366;
+}
+
+
+#video_calls .video_image{
+  width: 30%;
+  margin: 50px 0;
+ 
+}
+/* Video call section ends */
+
+/* speak section starts */
+#speak{
+background-color: #111b21;
+margin: 50px 0;
+}
+
+#speak .speak_img{
+width: 40%;
+}
+ 
+#speak .speak_img img{
+    width: 526px;
+    padding: 80px 0;
+}
+
+#speak .speak_det{
+    width: 40%;
+    margin: 250px 0;
+}
+
+
+#speak .speak_det h4{
+    color:#ffffff;
+    font-size: 60px;
+    margin: 0 0;
+    line-height: 60px;
+   
+}
+
+
+#speak .speak_det h4 span{
+    color: #25d366;
+    font-size: 60px;
+    
+}
+
+#speak .speak_det p{
+    color:#ffffff;
+    letter-spacing: -0.18px;
+     margin: 20px 0;
+}
+
+#speak .speak_det a{
+    color:#ffffff;
+    position: relative;
+    transition: 0.4s;
+    display: inline-block;
+    margin: 10px 0;
+    position: relative; 
+    transition: 0.4s;
+}
+
+#speak .speak_det a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #25d366;
+    left: 0;
+    bottom: -4px;  
+}
+
+#speak .speak_det a:hover{
+    color: #25d366;
+}
+/* Speak section ends */
+
+/* group section starts */
+
+#groups{
+    position: relative;
+} 
+#groups .group_det{
+    width: 45%;
+    margin: 220px 0;
+}
+
+.group_det h4{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px; 
+     margin: 0 0;
+}
+
+.group_det p{
+    font-size: 18px;
+}
+
+.group_det a{
+    color: var(--firstcolor);
+    position: relative;
+    transition: 0.4s;
+    display: inline-block;
+    margin: 10px 0; 
+    
+}
+
+.group_det a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #25d366;
+    left: 0;
+    bottom: -4px;
+}
+
+.group_det a:hover{
+    color: #25d366;
+}
+
+
+#groups .group_image{
+    width: 40%;
+    margin-top: 60px;
+
+}
+
+.group_image .float_images{
+    position: absolute;
+    left: 680px;
+    top: 130px;
+
+}
+/* group section ends */
+
+/* pebble beach section starts */
+
+#Pebble{
+
+
+}
+
+#Pebble .beach_image{
+    width: 40%;
+    position: relative;
+    margin: 50px 50px   
+    
+}
+
+
+#Pebble .beach_image .float{
+    position: absolute;
+    top:180px;
+
+}
+
+
+#Pebble .beach_det{
+    width: 30%;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.beach_det h4{
+    margin: 0 0 10px 0;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 500;
+}
+
+.beach_det p{
+    width: 450px;
+    font-size: 18px;
+    line-height: -0.18px;
+     
+}
+
+.beach_det a{
+    color: var(--firstcolor);
+    position: relative;
+    transition: 0.4s;
+    display: inline-block;
+    margin: 15px 0; 
+    
+}
+
+.beach_det a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #25d366;
+    left: 0;
+    bottom: -4px;
+}
+
+.beach_det a:hover{
+    color: #25d366;
+}
+/* pebble beach ends */
+
+/* mart shop starts */
+
+#shop .mart_det{
+    width: 38%;
+}
+
+.mart_det h4{
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 500;
+    
+}
+
+.mart_det p{
+    font-size: 18px;
+    width: 450px;
+    line-height: -0.18px;
+}
+
+.mart_det a{
+    color: var(--firstcolor);
+    position: relative;
+    transition: 0.4s;
+    display: inline-block;
+    margin: 15px 0; 
+    
+}
+
+.mart_det a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #25d366;
+    left: 0;
+    bottom: -4px;
+}
+
+.mart_det a:hover{
+    color: #25d366;
+}
+
+
+
+#shop .mart_image{
+    width: 40%;
+    margin-left: 240px;
+}
+/* mart secrtion ends */
+
+/* Connect us section starts */
+
+#connect{
+    background-color: #e6ffda;
+    margin-top: 80px;
+    border-radius: 0 0 30px 30px;
+
+   
+}
+
+#connect .det_head{
+    width: 45%;
+  
+}
+
+.det_head h3{
+    font-size: 60px;
+    font-weight: 500;
+   
+}
+
+#connect .det_speed{
+    width: 43%;
+    background-color: #ffffff;
+    margin:70px 50px;
+    text-align: start;
+    border-radius: 20px;
+  
+}
+
+.det_speed span{
+    font-size: 30px;
+    padding: 30px 30px;
+    display: inline-block;
+}
+
+.det_speed h3{
+    font-size: 32px;
+    padding: 0 15px;
+    width: 440px;
+}
+
+.det_speed p{
+    font-size: 18px;
+    padding-right: 20px;
+    width: 468px;
+    padding-left: 10px;
+}
+
+.det_speed a{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 40px;
+    background-color:#ffffff;
+    margin-left: 20px;
+    font-size: 16px;  
+    position: relative;
+    z-index: 1 ;
+     transition: 0.5s;
+    color: var(--firstcolor);
+    text-align: center;
+    border: 1px solid rgba(19, 18, 18, 0.692);
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+     
+}
+
+.det_speed a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--firstcolor);
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scaleX(0);
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+}
+.det_speed a:hover:after{
+    height: 100%;
+    transform: scaleX(1);
+    border-radius: 40px;  
+    opacity: 1;
+    visibility: visible;  
+}
+
+.det_speed a:hover{
+    color: var(--secondcolor);
+}
+
+/* connect us ends */
+
+/* Contact starts */
+
+
+#contact{
+    background-color: #111b21;   
+    border-bottom: 1px solid #ffffff;
+   
+}
+#contact .features{
+    width: calc(20% - 40px);
+    margin: 50px 20px;    
+}
+
+.features ul li .anc{
+    width: 140px;
+    height: 50px;
+    background-color: #25d366;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 40px;
+    color: var(--firstcolor);
+    position: relative;
+    z-index: 1 ;   
+    margin-top: 100px;
+    font-size: 16px;
+    
+}
+
+
+.features ul li .anc::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--secondcolor);
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scaleX(0);
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+     
+
+}
+
+.features ul li .anc:hover::after{
+    height: 100%;
+    transform: scaleX(1);
+    border-radius: 40px;  
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.features ul li{
+    font-size: 12px;
+    color: var(--secondcolor);
+    
+}
+
+.features ul .list{
+    margin: 20px 0;
+}
+
+
+
+.features ul li .anc_two{
+    font-size: 18px;
+    color: var(--secondcolor);
+    display: inline-block;
+    margin: 7px 0;
+    text-align: left;
+    position: relative;
+}
+
+.features ul li .anc_two:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.features ul li .anc_two:hover::before{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#links{
+    background-color: #111b21;
+}
+/* contact ends */
+
+/* footer starts */
+#copyright{
+background-color: #111b21;
+}
+
+#copyright .dis{
+    width: 30%;
+    text-align: left;
+    margin: 20px 0;
+}
+
+#copyright .dis ul li{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+#copyright .dis ul li .dis_anc{
+    font-size: 12px;
+    color: #ffffff;
+}
+
+#copyright .links{
+    width: 40%;
+    margin: 10px 0;
+}
+
+#copyright .links ul li{
+    display: inline-block;
+}
+
+#copyright .links ul li .links_anc{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 15px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#copyright .links ul li .links_anc::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: #25d366;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scaleX(0);
+    bottom: 0;
+    
+}
+
+#copyright .links ul li .links_anc:hover:after{
+    height: 100%;
+    border-radius: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: scaleX(1);
+    
+}
+
+#copyright .links ul li .links_anc:hover{
+    color: black;
+     
+}
+
+#copyright .lan{
+ margin: 30px 50px;
+}
+
+.lan select{
+    background-color: #111b21;
+    color: white;
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+  
+}
+
+.lan option{
+    background-color: white;
+    color:#111b21;
+    font-size: 15px;
+}
+   /* footer ends */
+ 
